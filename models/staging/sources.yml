@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: data
+    description: Snowflake database.
+    database: raw
+    schema: data
+    tables:
+      - name: json
+        description: Raw customers data.
+        columns:
+          - name: source
+            description: Primary key for json.
+            tests:
+              - unique
+              - not_null

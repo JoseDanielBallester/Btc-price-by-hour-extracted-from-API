@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_btc_price
+    description: Stage for historical bitcoin price
+    columns: 
+      - name: time_updated_hour
+        description: The primary key for btc price.
+        tests:
+          - unique
+          - not_null
